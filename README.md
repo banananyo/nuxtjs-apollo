@@ -67,3 +67,11 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+  // "lint-staged": {
+  //   "*.{js,vue}": "eslint",
+  //   "*.{css,vue}": "stylelint"
+  // },
+"lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+"lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
+"lint": "yarn lint:js && yarn lint:style",

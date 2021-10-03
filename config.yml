@@ -1,0 +1,8 @@
+schema: http://localhost:3000/graphql
+documents: ./apollo/**/*.gql
+generates:
+  types/graphql.d.ts:
+    - typescript-graphql-files-modules
+  types/types.ts:
+    - typescript
+    - typescript-operations
