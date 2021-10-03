@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    // "target": "es5",
+    // "module": "es2015",
     "moduleResolution": "Node",
     "lib": [
       "ESNext",
       "ESNext.AsyncIterable",
-      "DOM"
+      "DOM",
+      "dom.iterable", "scripthost"
     ],
     "esModuleInterop": true,
     "allowJs": true,
@@ -29,6 +35,14 @@
       "@types/node"
     ]
   },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.ts",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
   "exclude": [
     "node_modules",
     ".nuxt",

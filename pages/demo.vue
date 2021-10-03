@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import gql from 'graphql-tag';
+import { gql } from 'graphql-tag';
 
 export default {
   data: () => {
@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     async taskList() {
-      return this.$apollo.query({
+      const res = await this.$apollo.query({
         query: gql`
           query {
             taskList {
@@ -27,6 +27,7 @@ export default {
           }
         `,
       });
+      return res;
     },
   },
 };
